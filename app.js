@@ -72,41 +72,51 @@ db.connect(function(err) {
     
     io.on('connection', function (socket) {
     
-      socket.on('Modul1', function (data) {
+      socket.on('Modul', function (data) {
 
         var sql = "";
 
         if (data.status == "0") {
           sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul1', 'OFF', '${timee}', '${datee}')`;
         }
-        else {
+        else if (data.status == "1") {
           sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul1', 'ON', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "2") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul2', 'OFF', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "3") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul2', 'ON', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "4") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul3', 'OFF', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "5") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul3', 'ON', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "6") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul4', 'OFF', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "7") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul4', 'ON', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "8") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul5', 'OFF', '${timee}', '${datee}')`;
+        }
+        else if (data.status == "9") {
+          sql = `INSERT INTO Status (moduls, status, time, date) VALUES ('Modul5', 'ON', '${timee}', '${datee}')`;
         }
         db.query(sql, function (err, result) {
           if (err) throw err;
-          console.log("1 record inserted");
+          var modul = "";
+          if(data.status == "0" || data.status == "1") {modul = "1"}
+          else if(data.status == "2" || data.status == "3") {modul = "2"}
+          else if(data.status == "4" || data.status == "5") {modul = "3"}
+          else if(data.status == "6" || data.status == "7") {modul = "4"}
+          else if(data.status == "8" || data.status == "9") {modul = "5"}
+          console.log(`Modul: ${modul} status inserted`);
         });
-
-        console.log(data);
-        serialPort.write(data.status);
-      });
-  
-      socket.on('Modul2', function (data) {
-        console.log(data);
-        serialPort.write(data.status);
-      });
-  
-      socket.on('Modul3', function (data) {
-        console.log(data);
-        serialPort.write(data.status);
-      });
-  
-      socket.on('Modul4', function (data) {
-        console.log(data);
-        serialPort.write(data.status);
-      });
-  
-      socket.on('Modul5', function (data) {
+        
         console.log(data);
         serialPort.write(data.status);
       });

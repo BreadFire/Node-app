@@ -191,7 +191,7 @@
     let switch_button_modul_1 = document.getElementById("switch_btn_modul_1");
 
     function switch_btn_modul_1_TURN_OFF() {
-      socket.emit('Modul1', { "status": "0" });
+      socket.emit('Modul', { "status": "0" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -209,7 +209,7 @@
     }
 
     function switch_btn_modul_1_TURN_ON() {
-      socket.emit('Modul1', { "status": "1" });
+      socket.emit('Modul', { "status": "1" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -268,7 +268,7 @@
     let switch_button_modul_2 = document.getElementById("switch_btn_modul_2");
 
     function switch_btn_modul_2_TURN_OFF() {
-      socket.emit('Modul2', { "status": "2" });
+      socket.emit('Modul', { "status": "2" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -286,7 +286,7 @@
     }
 
     function switch_btn_modul_2_TURN_ON() {
-      socket.emit('Modul2', { "status": "3" });
+      socket.emit('Modul', { "status": "3" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -345,7 +345,7 @@
     let switch_button_modul_3 = document.getElementById("switch_btn_modul_3");
 
     function switch_btn_modul_3_TURN_OFF() {
-      socket.emit('Modul3', { "status": "4" });
+      socket.emit('Modul', { "status": "4" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -363,7 +363,7 @@
     }
 
     function switch_btn_modul_3_TURN_ON() {
-      socket.emit('Modul3', { "status": "5" });
+      socket.emit('Modul', { "status": "5" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -422,7 +422,7 @@
     let switch_button_modul_4 = document.getElementById("switch_btn_modul_4");
 
     function switch_btn_modul_4_TURN_OFF() {
-      socket.emit('Modul4', { "status": "6" });
+      socket.emit('Modul', { "status": "6" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -440,7 +440,7 @@
     }
 
     function switch_btn_modul_4_TURN_ON() {
-      socket.emit('Modul4', { "status": "7" });
+      socket.emit('Modul', { "status": "7" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -499,7 +499,7 @@
     let switch_button_modul_5 = document.getElementById("switch_btn_modul_5");
 
     function switch_btn_modul_5_TURN_OFF() {
-      socket.emit('Modul5', { "status": "8" });
+      socket.emit('Modul', { "status": "8" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
@@ -517,7 +517,7 @@
     }
 
     function switch_btn_modul_5_TURN_ON() {
-      socket.emit('Modul5', { "status": "9" });
+      socket.emit('Modul', { "status": "9" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
