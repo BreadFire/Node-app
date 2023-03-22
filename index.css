@@ -1,0 +1,138 @@
+.center {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+.h1 {
+  margin-left: 45px;
+  color: white;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.DB_btn {
+  position: relative;
+  background-color: rgb(40, 40, 40);
+  border: none;
+  left: 135px;
+  top: 10px;
+  transition-duration: 0.2s;
+}
+
+.DB_btn:hover {
+  cursor: pointer;
+}
+
+.edit_btn {
+  position: relative;
+  background-color: rgb(40, 40, 40);
+  border: none;
+  margin-right: 10px;
+  top: 26.5px;
+}
+
+.edit_btn:hover {
+  cursor: pointer;
+}
+
+input[type=text] {
+  position: relative;
+  margin-right: 20px;
+  width: 280px;
+  padding: 13px 0px;
+  border: none;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-size: 29px;
+  text-align: center;
+  top: 4px;
+  outline: none;
+}
+
+input[type=text] {
+  border: 3px solid #ffffff;
+  border-radius: 32px;
+}
+
+.input {
+  background-color: rgb(82, 82, 82);
+  transition-duration: 0.4s;
+}
+
+.switch_btn {
+  height: 64px;
+  width: 230px;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.switch_btn {
+  background-color: limegreen;
+  color: hwb(0 100% 0%);
+  border: 3px solid rgb(40, 40, 40);
+}
+
+.switch_btn:hover {
+  color: white;
+  border: 3px solid hwb(0 100% 0%);
+}
+
+.switch_btn {
+  border-radius: 32px;
+}
+
+.panel {
+  width: 700px;
+  height: 80px;
+  background-color: rgb(40, 40, 40);
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.panel1 {
+  width: 700px;
+  height: 560px;
+  background-color: rgb(40, 40, 40);
+  display: inline-block;
+  border-radius: 30px;
+  transition-duration: 0.2s;
+}
+
+.position_elements {
+  position: relative;
+  left: 0px;
+}
+
+.top {
+  position: relative;
+  margin-top: 10px;
+}
+
+.Page_background {
+  height: 90vh;
+  background: linear-gradient(333deg, #0704ae, #000000, #03aab3);
+  background-size: 200% 200%;
+  animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
