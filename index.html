@@ -6,148 +6,7 @@
   
   <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
 
-  <style>
-    .center {
-      position: relative;
-      margin: auto;
-      text-align: center;
-    }
-
-    .h1 {
-      margin-left: 40px;
-      color: white;
-      display: inline-block;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .DB_btn {
-      position: relative;
-      background-color: rgb(40, 40, 40);
-      border: none;
-      left: 140px;
-      top: 10px;
-      transition-duration: 0.2s;
-    }
-
-    .DB_btn:hover {
-      cursor: pointer;
-    }
-
-    .edit_btn {
-      position: relative;
-      background-color: rgb(40, 40, 40);
-      border: none;
-      margin-right: 10px;
-      top: 26.5px;
-    }
-
-    .edit_btn:hover {
-      cursor: pointer;
-    }
-
-    input[type=text] {
-      position: relative;
-      margin-right: 20px;
-      width: 280px;
-      padding: 13px 0px;
-      border: none;
-      background-color: rgb(40, 40, 40);
-      color: white;
-      font-size: 29px;
-      text-align: center;
-      top: 4px;
-      outline: none;
-    }
-
-    input[type=text] {
-      border: 3px solid #ffffff;
-      border-radius: 32px;
-    }
-
-    .input {
-      background-color: rgb(82, 82, 82);
-      transition-duration: 0.4s;
-    }
-
-    .switch_btn {
-      height: 64px;
-      width: 230px;
-      border: none;
-      color: white;
-      padding: 16px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-    }
-
-    .switch_btn {
-      background-color: limegreen;
-      color: hwb(0 100% 0%);
-      border: 3px solid rgb(40, 40, 40);
-    }
-
-    .switch_btn:hover {
-      color: white;
-      border: 3px solid hwb(0 100% 0%);
-    }
-
-    .switch_btn {
-      border-radius: 32px;
-    }
-
-    .panel {
-      width: 700px;
-      height: 80px;
-      background-color: rgb(40, 40, 40);
-      display: inline-block;
-      border-radius: 30px;
-    }
-
-    .panel1 {
-      width: 700px;
-      height: 560px;
-      background-color: rgb(40, 40, 40);
-      display: inline-block;
-      border-radius: 30px;
-      transition-duration: 0.2s;
-    }
-
-    .position_elements {
-      position: relative;
-      left: 0px;
-    }
-
-    .top {
-      position: relative;
-      margin-top: 10px;
-    }
-
-    .Page_background {
-      height: 90vh;
-      background: linear-gradient(333deg, #0704ae, #000000, #03aab3);
-      background-size: 200% 200%;
-      animation: gradient-animation 30s ease infinite;
-    }
-
-    @keyframes gradient-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" type="text/css" href="resourses/style/index.css"/>
 </head>
 
 <body class="Page_background">
@@ -175,50 +34,50 @@
     <div class="panel1" id="control_panel">
 
       <div class="top">
-        <input class="input" type="text" id="text_modul_1" disabled=true>
+        <input class="input" type="text" id="text_modul_1" disabled=true value="Modul 1">
 
         <button class="edit_btn" onclick="toggle_edit_modul_1()"><img
-            src="C:\Users\Rosni\Desktop\app_1.2\Edit_text_image.png" height="64" width="64" /></button>
+            src="resourses/images/Edit_text_image.png" height="64" width="64" /></button>
 
         <button class="switch_btn position_elements" id="switch_btn_modul_1"
           onclick="toggle_swtch_modul_1()">ON</button>
       </div>
 
       <div class="top">
-        <input class="input" type="text" id="text_modul_2" disabled=true>
+        <input class="input" type="text" id="text_modul_2" disabled=true value="Modul 2">
 
         <button class="edit_btn" onclick="toggle_edit_modul_2()"><img
-            src="C:\Users\Rosni\Desktop\app_1.2\Edit_text_image.png" height="64" width="64" /></button>
+            src="resourses/images/Edit_text_image.png" height="64" width="64" /></button>
 
         <button class="switch_btn position_elements" id="switch_btn_modul_2"
           onclick="toggle_swtch_modul_2()">ON</button>
       </div>
 
       <div class="top">
-        <input class="input" type="text" id="text_modul_3" disabled=true>
+        <input class="input" type="text" id="text_modul_3" disabled=true value="Modul 3">
 
         <button class="edit_btn" onclick="toggle_edit_modul_3()"><img
-            src="C:\Users\Rosni\Desktop\app_1.2\Edit_text_image.png" height="64" width="64" /></button>
+            src="resourses/images/Edit_text_image.png" height="64" width="64" /></button>
 
         <button class="switch_btn position_elements" id="switch_btn_modul_3"
           onclick="toggle_swtch_modul_3()">ON</button>
       </div>
 
       <div class="top">
-        <input class="input" type="text" id="text_modul_4" disabled=true>
+        <input class="input" type="text" id="text_modul_4" disabled=true value="Modul 4">
 
         <button class="edit_btn" onclick="toggle_edit_modul_4()"><img
-            src="C:\Users\Rosni\Desktop\app_1.2\Edit_text_image.png" height="64" width="64" /></button>
+            src="resourses/images/Edit_text_image.png" height="64" width="64" /></button>
 
         <button class="switch_btn position_elements" id="switch_btn_modul_4"
           onclick="toggle_swtch_modul_4()">ON</button>
       </div>
 
       <div class="top">
-        <input class="input" type="text" id="text_modul_5" disabled=true>
+        <input class="input" type="text" id="text_modul_5" disabled=true value="Modul 5">
 
         <button class="edit_btn" onclick="toggle_edit_modul_5()"><img
-            src="C:\Users\Rosni\Desktop\app_1.2\Edit_text_image.png" height="64" width="64" /></button>
+            src="resourses/images/Edit_text_image.png" height="64" width="64" /></button>
 
         <button class="switch_btn position_elements" id="switch_btn_modul_5"
           onclick="toggle_swtch_modul_5()">ON</button>
@@ -231,7 +90,7 @@
 
    let db_bnt = document.getElementById("db_btn");
 
-   document.getElementById("db_btn_image").src = "C:/Users/Rosni/Desktop/app_1.2/DB_image.png";
+   document.getElementById("db_btn_image").src = "resourses/images/DB_image.png";
 
     var control_panel = document.getElementById("control_panel");
     var elm1 = document.getElementById("pan1");
@@ -257,7 +116,7 @@
       control_panel.style.opacity = "0.0";
       db_bnt.style.opacity = "0.0";
         setTimeout(function () { 
-          document.getElementById("db_btn_image").src = "C:/Users/Rosni/Desktop/app_1.2/Three_lines_image.png";
+          document.getElementById("db_btn_image").src = "resourses/images/Three_lines_image.png";
           elm1.style.display = "none"; 
           elm.style.display = "block"; 
           db_panel.style.opacity = "0.0";
@@ -274,7 +133,7 @@
       db_panel.style.opacity = "0.0";
       db_bnt.style.opacity = "0.0";
         setTimeout(function () { 
-          document.getElementById("db_btn_image").src = "C:/Users/Rosni/Desktop/app_1.2/DB_image.png";
+          document.getElementById("db_btn_image").src = "resourses/images/DB_image.png";
           elm.style.display = "none"; 
           elm1.style.display = "block"; 
           control_panel.style.opacity = "0.0";
@@ -332,23 +191,39 @@
     let switch_button_modul_1 = document.getElementById("switch_btn_modul_1");
 
     function switch_btn_modul_1_TURN_OFF() {
-      socket.emit('Modul_1', { "status": "0" });
+      socket.emit('Modul1', { "status": "0" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_1.textContent = "OFF"
         document.getElementById("switch_btn_modul_1").style.backgroundColor = "red";
       }, delayInMilliseconds);
       switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     function switch_btn_modul_1_TURN_ON() {
-      socket.emit('Modul_1', { "status": "1" });
+      socket.emit('Modul1', { "status": "1" });
       setTimeout(function () {
         switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_1.textContent = "ON"
         document.getElementById("switch_btn_modul_1").style.backgroundColor = "limegreen";
       }, delayInMilliseconds);
       switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     //////////////////////////////////////////// MODUL 2 /////////////////////////////////////////////////////////
@@ -393,23 +268,39 @@
     let switch_button_modul_2 = document.getElementById("switch_btn_modul_2");
 
     function switch_btn_modul_2_TURN_OFF() {
-      socket.emit('Modul_2', { "status": "2" });
+      socket.emit('Modul2', { "status": "2" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_2.textContent = "OFF"
         document.getElementById("switch_btn_modul_2").style.backgroundColor = "red";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
       switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     function switch_btn_modul_2_TURN_ON() {
-      socket.emit('Modul_2', { "status": "3" });
+      socket.emit('Modul2', { "status": "3" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
         switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_2.textContent = "ON"
         document.getElementById("switch_btn_modul_2").style.backgroundColor = "limegreen";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
       switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     //////////////////////////////////////////// MODUL 3 /////////////////////////////////////////////////////////
@@ -454,23 +345,39 @@
     let switch_button_modul_3 = document.getElementById("switch_btn_modul_3");
 
     function switch_btn_modul_3_TURN_OFF() {
-      socket.emit('Modul_3', { "status": "4" });
+      socket.emit('Modul3', { "status": "4" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
         switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_3.textContent = "OFF"
         document.getElementById("switch_btn_modul_3").style.backgroundColor = "red";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
       switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     function switch_btn_modul_3_TURN_ON() {
-      socket.emit('Modul_3', { "status": "5" });
+      socket.emit('Modul3', { "status": "5" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
         switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_3.textContent = "ON"
         document.getElementById("switch_btn_modul_3").style.backgroundColor = "limegreen";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
       switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     //////////////////////////////////////////// MODUL 4 /////////////////////////////////////////////////////////
@@ -515,23 +422,39 @@
     let switch_button_modul_4 = document.getElementById("switch_btn_modul_4");
 
     function switch_btn_modul_4_TURN_OFF() {
-      socket.emit('Modul_4', { "status": "6" });
+      socket.emit('Modul4', { "status": "6" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
         switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_4.textContent = "OFF"
         document.getElementById("switch_btn_modul_4").style.backgroundColor = "red";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
       switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     function switch_btn_modul_4_TURN_ON() {
-      socket.emit('Modul_4', { "status": "7" });
+      socket.emit('Modul4', { "status": "7" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
         switch_button_modul_4.disabled = false;
+        switch_button_modul_5.disabled = false;
         switch_button_modul_4.textContent = "ON"
         document.getElementById("switch_btn_modul_4").style.backgroundColor = "limegreen";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
       switch_button_modul_4.disabled = true;
+      switch_button_modul_5.disabled = true;
     }
 
     //////////////////////////////////////////// MODUL 5 /////////////////////////////////////////////////////////
@@ -576,22 +499,38 @@
     let switch_button_modul_5 = document.getElementById("switch_btn_modul_5");
 
     function switch_btn_modul_5_TURN_OFF() {
-      socket.emit('Modul_5', { "status": "8" });
+      socket.emit('Modul5', { "status": "8" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
         switch_button_modul_5.disabled = false;
         switch_button_modul_5.textContent = "OFF"
         document.getElementById("switch_btn_modul_5").style.backgroundColor = "red";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
       switch_button_modul_5.disabled = true;
     }
 
     function switch_btn_modul_5_TURN_ON() {
-      socket.emit('Modul_5', { "status": "9" });
+      socket.emit('Modul5', { "status": "9" });
       setTimeout(function () {
+        switch_button_modul_1.disabled = false;
+        switch_button_modul_2.disabled = false;
+        switch_button_modul_3.disabled = false;
+        switch_button_modul_4.disabled = false;
         switch_button_modul_5.disabled = false;
         switch_button_modul_5.textContent = "ON"
         document.getElementById("switch_btn_modul_5").style.backgroundColor = "limegreen";
       }, delayInMilliseconds);
+      switch_button_modul_1.disabled = true;
+      switch_button_modul_2.disabled = true;
+      switch_button_modul_3.disabled = true;
+      switch_button_modul_4.disabled = true;
       switch_button_modul_5.disabled = true;
     }
   </script>
